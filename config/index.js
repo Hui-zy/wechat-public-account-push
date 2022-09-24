@@ -87,24 +87,17 @@ export const USER_CONFIG = {
       // 专属纪念日/倒数日，如果你在这里填写了纪念日/倒数日，就不会计算CUSTOMIZED_DATE_LIST的日子了, 和CUSTOMIZED_DATE_LIST的配置方法相同，可以往下查看，我这里就不重复写了
       customizedDateList: [
         // 在一起的日子
-        {"keyword": "love_day", date: "2022-09-08"},
-        // 结婚纪念日
-        {"keyword": "marry_day", date: "2022-09-09"},
-        // 退伍日
-        {"keyword": "ex_day", date: "2022-09-10"},
-      ]
-    },
-    {
-      name: "老婆1",
-      id: "",
-      useTemplateId: "",
-      province: "",
-      city: "",
-      horoscopeDate: '',
-      horoscopeDateType: '',
+     
+      name: "宝宝",
+      id: "祝宇宝宝，早上好吖~",
+      useTemplateId: "C3Hxo2WWw-uDpAcXv_Vu7sUSNBMRJIzooi1-6moQUsI",
+      province: "上海",
+      city: "上海",
+      horoscopeDate: '08-01',
+      horoscopeDateType: '今日',
       openUrl: "https://wangxinleo.cn",
-      festivals: [],
-      customizedDateList: []
+      festivals: [ {"type": "生日", "name": "祝宇宝贝", "year": "2000", "date": "08-01"}],
+      customizedDateList: [{"type": "节日", "name": "认识纪念日", "year": "2021", "date": "11-23"}]
     },
     {
       name: "老婆2",
@@ -139,10 +132,10 @@ export const USER_CONFIG = {
    */
   
   // 【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
-  CALLBACK_TEMPLATE_ID: "",
+  CALLBACK_TEMPLATE_ID: "C3Hxo2WWw-uDpAcXv_Vu7sUSNBMRJIzooi1-6moQUsI",
   
   // 接收成功回调消息的微信号，（一般来说只填自己的微信号, name填不填无所谓）
-  CALLBACK_USERS: [
+  CALLBACK_USERS: [w-10486]
     {
       // 一般都填自己
       name: "自己",
@@ -224,7 +217,7 @@ export const USER_CONFIG = {
    * keyword是指暴露给测试号的模板字段，填什么就暴露什么, 请注意不要和README的出参表中的字段重复。
    * 比如：keyword: "lover_prattle" ，在测试号中就是 {{ lover_prattle.DATA }}
    * */
-  SLOT_LIST: [
+  SLOT_LIST: [ {"keyword": "encourage_oneself", contents: "申请成为你心里的永久居民"}]
     // 这样配置的话，就会每次发送这句话
     {"keyword": "encourage_oneself", contents: "你主要的问题在于读书太少而想得太多"},
     // 这样配置的话，就会每次随机选一句话发送
